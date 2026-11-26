@@ -1,0 +1,705 @@
+{
+  "definitions": {
+    "accuracy@1": "Доля запросов, где первый вызванный сабагент совпал с эталоном по полю SubAgent.",
+    "accuracy@full": "Доля запросов, где эталонный сабагент был вызван хотя бы раз.",
+    "no_subagent_calls": "Запрос входит в знаменатель обеих метрик и получает 0 в каждой.",
+    "ordering": "По времени старта вызова. Повторные вызовы учтены в порядке, в котором они произошли."
+  },
+  "metrics": {
+    "all": {
+      "n": 299,
+      "accuracy@1": 0.5284280936454849,
+      "accuracy@full": 0.6387959866220736,
+      "hits@1": 158,
+      "hits@full": 191,
+      "queries_without_subagent_calls": 28
+    },
+    "test": {
+      "n": 90,
+      "accuracy@1": 0.5,
+      "accuracy@full": 0.6555555555555556,
+      "hits@1": 45,
+      "hits@full": 59,
+      "queries_without_subagent_calls": 9
+    }
+  },
+  "by_target_subagent": {
+    "all": {
+      "agentic_skills": {
+        "n": 10,
+        "accuracy@1": 0.8,
+        "accuracy@full": 0.9,
+        "hits@1": 8,
+        "hits@full": 9,
+        "queries_without_subagent_calls": 0
+      },
+      "ai-coach": {
+        "n": 33,
+        "accuracy@1": 0.6666666666666666,
+        "accuracy@full": 0.7575757575757576,
+        "hits@1": 22,
+        "hits@full": 25,
+        "queries_without_subagent_calls": 2
+      },
+      "delegation": {
+        "n": 8,
+        "accuracy@1": 0.0,
+        "accuracy@full": 0.0,
+        "hits@1": 0,
+        "hits@full": 0,
+        "queries_without_subagent_calls": 0
+      },
+      "education": {
+        "n": 7,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 7,
+        "hits@full": 7,
+        "queries_without_subagent_calls": 0
+      },
+      "hrp-analytics": {
+        "n": 141,
+        "accuracy@1": 0.41843971631205673,
+        "accuracy@full": 0.5035460992907801,
+        "hits@1": 59,
+        "hits@full": 71,
+        "queries_without_subagent_calls": 23
+      },
+      "metrics": {
+        "n": 11,
+        "accuracy@1": 0.6363636363636364,
+        "accuracy@full": 0.9090909090909091,
+        "hits@1": 7,
+        "hits@full": 10,
+        "queries_without_subagent_calls": 0
+      },
+      "onboarding_top_600": {
+        "n": 6,
+        "accuracy@1": 0.6666666666666666,
+        "accuracy@full": 0.6666666666666666,
+        "hits@1": 4,
+        "hits@full": 4,
+        "queries_without_subagent_calls": 0
+      },
+      "outstaff": {
+        "n": 2,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 2,
+        "hits@full": 2,
+        "queries_without_subagent_calls": 0
+      },
+      "profile-essay": {
+        "n": 6,
+        "accuracy@1": 0.0,
+        "accuracy@full": 0.6666666666666666,
+        "hits@1": 0,
+        "hits@full": 4,
+        "queries_without_subagent_calls": 1
+      },
+      "talent-research": {
+        "n": 29,
+        "accuracy@1": 0.8275862068965517,
+        "accuracy@full": 0.8620689655172413,
+        "hits@1": 24,
+        "hits@full": 25,
+        "queries_without_subagent_calls": 2
+      },
+      "team_profile": {
+        "n": 15,
+        "accuracy@1": 0.26666666666666666,
+        "accuracy@full": 0.7333333333333333,
+        "hits@1": 4,
+        "hits@full": 11,
+        "queries_without_subagent_calls": 0
+      },
+      "top600-successor-rotation": {
+        "n": 11,
+        "accuracy@1": 0.9090909090909091,
+        "accuracy@full": 1.0,
+        "hits@1": 10,
+        "hits@full": 11,
+        "queries_without_subagent_calls": 0
+      },
+      "vacation": {
+        "n": 20,
+        "accuracy@1": 0.55,
+        "accuracy@full": 0.6,
+        "hits@1": 11,
+        "hits@full": 12,
+        "queries_without_subagent_calls": 0
+      }
+    },
+    "test": {
+      "agentic_skills": {
+        "n": 3,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 3,
+        "hits@full": 3,
+        "queries_without_subagent_calls": 0
+      },
+      "ai-coach": {
+        "n": 10,
+        "accuracy@1": 0.7,
+        "accuracy@full": 0.7,
+        "hits@1": 7,
+        "hits@full": 7,
+        "queries_without_subagent_calls": 2
+      },
+      "delegation": {
+        "n": 2,
+        "accuracy@1": 0.0,
+        "accuracy@full": 0.0,
+        "hits@1": 0,
+        "hits@full": 0,
+        "queries_without_subagent_calls": 0
+      },
+      "education": {
+        "n": 2,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 2,
+        "hits@full": 2,
+        "queries_without_subagent_calls": 0
+      },
+      "hrp-analytics": {
+        "n": 42,
+        "accuracy@1": 0.3333333333333333,
+        "accuracy@full": 0.5,
+        "hits@1": 14,
+        "hits@full": 21,
+        "queries_without_subagent_calls": 7
+      },
+      "metrics": {
+        "n": 3,
+        "accuracy@1": 0.6666666666666666,
+        "accuracy@full": 1.0,
+        "hits@1": 2,
+        "hits@full": 3,
+        "queries_without_subagent_calls": 0
+      },
+      "onboarding_top_600": {
+        "n": 2,
+        "accuracy@1": 0.5,
+        "accuracy@full": 0.5,
+        "hits@1": 1,
+        "hits@full": 1,
+        "queries_without_subagent_calls": 0
+      },
+      "outstaff": {
+        "n": 1,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 1,
+        "hits@full": 1,
+        "queries_without_subagent_calls": 0
+      },
+      "profile-essay": {
+        "n": 2,
+        "accuracy@1": 0.0,
+        "accuracy@full": 1.0,
+        "hits@1": 0,
+        "hits@full": 2,
+        "queries_without_subagent_calls": 0
+      },
+      "talent-research": {
+        "n": 9,
+        "accuracy@1": 0.7777777777777778,
+        "accuracy@full": 0.8888888888888888,
+        "hits@1": 7,
+        "hits@full": 8,
+        "queries_without_subagent_calls": 0
+      },
+      "team_profile": {
+        "n": 5,
+        "accuracy@1": 0.2,
+        "accuracy@full": 0.8,
+        "hits@1": 1,
+        "hits@full": 4,
+        "queries_without_subagent_calls": 0
+      },
+      "top600-successor-rotation": {
+        "n": 3,
+        "accuracy@1": 1.0,
+        "accuracy@full": 1.0,
+        "hits@1": 3,
+        "hits@full": 3,
+        "queries_without_subagent_calls": 0
+      },
+      "vacation": {
+        "n": 6,
+        "accuracy@1": 0.6666666666666666,
+        "accuracy@full": 0.6666666666666666,
+        "hits@1": 4,
+        "hits@full": 4,
+        "queries_without_subagent_calls": 0
+      }
+    }
+  },
+  "inputs": {
+    "bucket": "bucket_v6/BUCKET_RnD_subagent_descriptions_25.11.csv",
+    "bucket_sha256": "5d45e5e3cf6f1e1a22e41fbabeb3e4bfa66da2205fa93f45da928894b9b7b649",
+    "traces": "AS-IS_traces",
+    "split_manifest": "splits/manifest.csv",
+    "split_manifest_sha256": "a16e9cfe3ab0df44c9e7d663aed20087e471b1f36b13161b0060291e5069aacf"
+  },
+  "trace_matching_and_extraction": {
+    "bucket_file": "bucket_v6/BUCKET_RnD_subagent_descriptions_25.11.csv",
+    "bucket_sha256": "5d45e5e3cf6f1e1a22e41fbabeb3e4bfa66da2205fa93f45da928894b9b7b649",
+    "question_matches": 299,
+    "filename_uuid_matches": 299,
+    "unique_trace_ids": 299,
+    "task_agents": {
+      "hrp-analytics": 176,
+      "general-purpose": 101,
+      "manager-efficiency": 11,
+      "vacation": 15,
+      "profile-essay": 13,
+      "metrics": 22,
+      "agentic_skills": 11,
+      "top600-successor-rotation": 22,
+      "ai-coach": 44,
+      "team_profile": 18,
+      "service_navigation": 40,
+      "onboarding_top_600": 9,
+      "meetings": 7,
+      "employee-motivation": 4,
+      "education": 10,
+      "grill": 1,
+      "recruiter": 7,
+      "talent-research": 31,
+      "outstaff": 4
+    },
+    "invalid_agents": {},
+    "agent_span_kinds": {
+      "CHAIN": 535,
+      "AGENT": 11
+    },
+    "task_statuses": {
+      "OK / finished": 523,
+      "ERROR / error": 23
+    },
+    "root_statuses": {
+      "OK / finished": 276,
+      "ERROR / error": 23
+    },
+    "diagnostic_counts": {
+      "non_ok_root": 23,
+      "non_ok_agent_invocation": 23,
+      "non_ok_task": 23,
+      "root_output_call_mismatch": 23,
+      "no_agent_calls": 28
+    },
+    "diagnostic_rows": {
+      "non_ok_root": [
+        277,
+        141,
+        12,
+        101,
+        271,
+        109,
+        39,
+        212,
+        213,
+        215,
+        105,
+        124,
+        131,
+        106,
+        201,
+        138,
+        31,
+        150,
+        61,
+        228,
+        272,
+        99,
+        18
+      ],
+      "non_ok_agent_invocation": [
+        [
+          277,
+          "vacation"
+        ],
+        [
+          141,
+          "metrics"
+        ],
+        [
+          12,
+          "hrp-analytics"
+        ],
+        [
+          101,
+          "hrp-analytics"
+        ],
+        [
+          271,
+          "hrp-analytics"
+        ],
+        [
+          109,
+          "recruiter"
+        ],
+        [
+          39,
+          "hrp-analytics"
+        ],
+        [
+          212,
+          "talent-research"
+        ],
+        [
+          213,
+          "talent-research"
+        ],
+        [
+          215,
+          "talent-research"
+        ],
+        [
+          105,
+          "outstaff"
+        ],
+        [
+          124,
+          "ai-coach"
+        ],
+        [
+          131,
+          "general-purpose"
+        ],
+        [
+          106,
+          "hrp-analytics"
+        ],
+        [
+          201,
+          "general-purpose"
+        ],
+        [
+          138,
+          "general-purpose"
+        ],
+        [
+          31,
+          "team_profile"
+        ],
+        [
+          150,
+          "metrics"
+        ],
+        [
+          61,
+          "metrics"
+        ],
+        [
+          228,
+          "recruiter"
+        ],
+        [
+          272,
+          "vacation"
+        ],
+        [
+          99,
+          "hrp-analytics"
+        ],
+        [
+          18,
+          "recruiter"
+        ]
+      ],
+      "non_ok_task": [
+        [
+          277,
+          "vacation"
+        ],
+        [
+          141,
+          "metrics"
+        ],
+        [
+          12,
+          "hrp-analytics"
+        ],
+        [
+          101,
+          "hrp-analytics"
+        ],
+        [
+          271,
+          "hrp-analytics"
+        ],
+        [
+          109,
+          "recruiter"
+        ],
+        [
+          39,
+          "hrp-analytics"
+        ],
+        [
+          212,
+          "talent-research"
+        ],
+        [
+          213,
+          "talent-research"
+        ],
+        [
+          215,
+          "talent-research"
+        ],
+        [
+          105,
+          "outstaff"
+        ],
+        [
+          124,
+          "ai-coach"
+        ],
+        [
+          131,
+          "general-purpose"
+        ],
+        [
+          106,
+          "hrp-analytics"
+        ],
+        [
+          201,
+          "general-purpose"
+        ],
+        [
+          138,
+          "general-purpose"
+        ],
+        [
+          31,
+          "team_profile"
+        ],
+        [
+          150,
+          "metrics"
+        ],
+        [
+          61,
+          "metrics"
+        ],
+        [
+          228,
+          "recruiter"
+        ],
+        [
+          272,
+          "vacation"
+        ],
+        [
+          99,
+          "hrp-analytics"
+        ],
+        [
+          18,
+          "recruiter"
+        ]
+      ],
+      "root_output_call_mismatch": [
+        [
+          277,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          141,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 2
+          }
+        ],
+        [
+          12,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          101,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          271,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 2
+          }
+        ],
+        [
+          109,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          39,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          212,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 2
+          }
+        ],
+        [
+          213,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          215,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          105,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 5
+          }
+        ],
+        [
+          124,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 6
+          }
+        ],
+        [
+          131,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 2
+          }
+        ],
+        [
+          106,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 2
+          }
+        ],
+        [
+          201,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 4
+          }
+        ],
+        [
+          138,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 3
+          }
+        ],
+        [
+          31,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          150,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 3
+          }
+        ],
+        [
+          61,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          228,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          272,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          99,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 1
+          }
+        ],
+        [
+          18,
+          {
+            "model_task_count": 0,
+            "traced_task_count": 4
+          }
+        ]
+      ],
+      "no_agent_calls": [
+        202,
+        280,
+        281,
+        282,
+        283,
+        207,
+        284,
+        286,
+        287,
+        288,
+        221,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        23,
+        192,
+        93,
+        32,
+        298,
+        299,
+        175,
+        184
+      ]
+    },
+    "first_hits": 158,
+    "any_hits": 191
+  }
+}
